@@ -1,0 +1,9 @@
+{
+    "port": 8080,
+    "apis": {
+        "tmdb": {
+            "key": "you_key_here",
+            "token": "your_token_here"
+        }
+    }
+}
