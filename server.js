@@ -1,6 +1,7 @@
 const config = require("./config.json")
 const express = require("express")
 const app = express()
+const path = require("path")
 const bcrypt = require("bcryptjs")
 const passport = require("passport")
 const flash = require("express-flash")
@@ -34,6 +35,10 @@ app.get("/", checkAuthenticated, (req, res) => {
     res.render("index.ejs", {
         user: req.user
     })
+})
+
+app.use("/assets/", (req, res) => {
+	res.sendFile(path.join(__dirname, req.path))
 })
 
 app.get("/login", checkNotAuthenticated, (req, res) => {
