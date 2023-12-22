@@ -17,6 +17,21 @@ main {
 }
 
 main > form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 33%;
+    height: 34.7%;
     appearance: none;
+    border-radius: 50px;
+    background-color: #F3F3F3;
     -webkit-appearance: none;
+    transform: translate(-50%, -50%);
+}
+
+main > form > section.companyInfo {
+    width: 40%;
+    height: 100%;
+    border-radius: 50px 0px 0px 50px;
+    background: linear-gradient(151.58deg, #FAA0A0 0%, #FACAA0 100%);
 }
