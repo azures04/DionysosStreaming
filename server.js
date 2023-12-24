@@ -13,8 +13,8 @@ const methodOverride = require("method-override")
 const initializePassport = passport_config
 initializePassport(
     passport,
-    email => users.find(user => user.email === email),
-    id => users.find(user => user.id === id)
+    name => JSON.parse(fs.readFileSync(path.join(__dirname, "db", "users.json"))).find(user => user.name === name),
+    id => JSON.parse(fs.readFileSync(path.join(__dirname, "db", "users.json"))).find(user => user.id === id)
 )
 
 app.set("view-engine", "ejs")
