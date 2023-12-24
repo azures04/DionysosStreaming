@@ -19,6 +19,11 @@ La structure du dossier `media` doit être mis comme sa :
 │           ├───<nom_du_film>
 │               ├───F_<numéro_de_partie>-<titre>
 ```
+### Identifiant par défaut
+> **Nom d'utilisateur :** admin
+<br>
+> **Mot de passe:** admin
+
 
 ## Close de non-responsabilité
 Je ne suis en aucun cas responsable du contenu ou de l'usage de ce projet. Toutes personnes ne respectant pas la charte d'utilisation et ou license appliqué à se projet se verra bannis du service.
