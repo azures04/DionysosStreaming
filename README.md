@@ -20,7 +20,7 @@ La structure du dossier `media` doit être mis comme sa :
 │               ├───F_<numéro_de_partie>-<titre>
 ```
 ### Identifiant par défaut
-> **Nom d'utilisateur :** admin
+> **Nom d'utilisateur :** admin  
 > **Mot de passe:** admin
 
 
