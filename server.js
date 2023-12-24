@@ -23,7 +23,7 @@ app.use(express.urlencoded({
 }))
 app.use(flash())
 app.use(session({
-    secret: process.env.SESSION_SECRET,
+    secret: "PJQBzou4MhiDPzu",
     resave: false,
     saveUninitialized: false
 }))
@@ -38,7 +38,7 @@ app.get("/", checkAuthenticated, (req, res) => {
 })
 
 app.use("/assets/", (req, res) => {
-	res.sendFile(path.join(__dirname, req.path))
+	res.sendFile(path.join(__dirname, "views", "assets", req.path))
 })
 
 app.get("/login", checkNotAuthenticated, (req, res) => {
