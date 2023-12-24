@@ -20,7 +20,7 @@ module.exports = (root) = {
             }
             fs.writeFileSync(path.join(root, "db", "users.json"), JSON.stringify(users, null, 4))
         } else {
-            return new Error("[Module<User>] Limite de profiles atteintes")
+            return new Error("[Module<Profiles>] Limite de profiles atteintes")
         }
     },
 

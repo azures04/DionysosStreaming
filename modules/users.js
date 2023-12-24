@@ -5,8 +5,12 @@ const path = require("path")
 module.exports = (root) = {
     addUser: async (user) => {
         const users = JSON.parse(await fs.readFile(path.join(root, "db", "users.json")))
-        users.push(user)
-        fs.writeFileSync(path.join(root, "db", "users.json"), JSON.stringify(users, null, 4))
+        if (users.find(user_ => user_.name == user.name) || users.find(user_ => user_.email == user.email)) {
+            users.push(user)
+            fs.writeFileSync(path.join(root, "db", "users.json"), JSON.stringify(users, null, 4))
+        } else {
+            return new Error("[Module<User>] Utilisateur déjà inscrit")
+        }
     },
 
     deleteUser: async (userUUID) => {
