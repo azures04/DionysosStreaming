@@ -21,7 +21,6 @@ La structure du dossier `media` doit être mis comme sa :
 ```
 ### Identifiant par défaut
 > **Nom d'utilisateur :** admin
-<br>
 > **Mot de passe:** admin
 
 
