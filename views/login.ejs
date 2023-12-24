@@ -18,7 +18,7 @@
 	<% } %>	  
 
 	<main>
-		<form>
+		<form action="/login" method="POST">
 			<section class="companyInfo">
 				<img src="./assets/img/logo-white.png" alt="Logo sur fond blanc">
 				<h2>Dionysos</h2>
@@ -27,11 +27,11 @@
 			<section class="form">
 				<h1>Connexion</h1>
 				<div>
-					<input type="text" id="username_input" placeholder="Nom d'utilisateur">
+					<input type="text" id="username" placeholder="Nom d'utilisateur"  required>
 					<div></div>
 				</div>
 				<div>
-					<input type="password" id="password_input" placeholder="Mot de passe">
+					<input type="password" id="password" placeholder="Mot de passe" required>
 					<div></div>
 				</div>
 				<div>

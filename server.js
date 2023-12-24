@@ -1,4 +1,6 @@
+const fs = require("fs")
 const config = require("./config.json")
+const { passport_config, users, profiles, scan} = require("./modules/modules")
 const express = require("express")
 const app = express()
 const path = require("path")
@@ -8,14 +10,12 @@ const flash = require("express-flash")
 const session = require("express-session")
 const methodOverride = require("method-override")
 
-const initializePassport = require("./modules/passport-config")
+const initializePassport = passport_config
 initializePassport(
     passport,
     email => users.find(user => user.email === email),
     id => users.find(user => user.id === id)
 )
-
-const users = []
 
 app.set("view-engine", "ejs")
 app.use(express.urlencoded({
@@ -58,12 +58,13 @@ app.get("/register", checkNotAuthenticated, (req, res) => {
 app.post("/register", checkNotAuthenticated, async (req, res) => {
     try {
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
-        users.push({
+        users.addUser({
             id: Date.now().toString(),
-            name: req.body.name,
+            name: req.body.username,
             email: req.body.email,
+            group: "member",
             password: hashedPassword
-        })
+        }, __dirname)
         res.redirect("/login")
     } catch {
         res.redirect("/register")

@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "id": "1703435305450",
+        "name": "admin",
+        "email": "admin@localhost",
+        "group": "admin",
+        "password": "$2a$10$9BM.MIWTySZljS//pJ82CePWQx.z/HARCV2aRWPV2nr4rH/V5D9RG"
+    }
+]

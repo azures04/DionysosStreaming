@@ -18,7 +18,7 @@
 	<% } %>	  
 
 	<main>
-		<form>
+		<form action="/register" method="POST">
 			<section class="companyInfo">
 				<img src="./assets/img/logo-white.png" alt="Logo sur fond blanc">
 				<h2>Dionysos</h2>
@@ -27,19 +27,19 @@
 			<section class="form">
 				<h1>Inscription</h1>
 				<div>
-					<input type="email" id="email_input" placeholder="Adresse mail">
+					<input type="email" name="email" id="email" placeholder="Adresse mail" required>
 					<div></div>
 				</div>
 				<div>
-					<input type="text" id="username_input" placeholder="Nom d'utilisateur">
+					<input type="text" name="username" id="username" placeholder="Nom d'utilisateur" required>
 					<div></div>
 				</div>
 				<div>
-					<input type="password" id="password_input" placeholder="Mot de passe">
+					<input type="password" name="password" id="password" placeholder="Mot de passe" required>
 					<div></div>
 				</div>
-				<button>
-					Se connecter
+				<button type="submit">
+					S'inscrire
 				</button>
 			</section>
 		</form>
